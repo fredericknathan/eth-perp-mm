@@ -1,12 +1,12 @@
 # TL;DR
 
-The entire strategy is basically a non mean-reverting implementation of the infamous [Avellaneda-Stoikov](https://medium.com/hummingbot/a-comprehensive-guide-to-avellaneda-stoikovs-market-making-strategy-102d64bf5df6) model. When doing pre-trade analysis, to look at price behaviour, I noticed that the ADF test results for different data comes out as follows:
+The entire strategy is basically a non mean-reverting implementation of the infamous [Avellaneda-Stoikov](https://medium.com/hummingbot/a-comprehensive-guide-to-avellaneda-stoikovs-market-making-strategy-102d64bf5df6) model. When doing pre-trade analysis, to look at price behaviour, I noticed that the [ADF test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) results for different data comes out as follows:
 
 1. Mid-price: doesn't reject H0
 2. Bid-ask spread: reject H0
 3. OFI: reject H0
 
-In other words, the mid-price is not stationary but bid-ask spread and OFI is. Therefore, I changed the original Avellaneda-Stoikov model from using a Brownian Drift to OFI which shows strong stationarity.
+In other words, the mid-price is not stationary but bid-ask spread and OFI is. Therefore, I changed the original Avellaneda-Stoikov model from using a [Brownian Drift](https://en.wikipedia.org/wiki/Geometric_Brownian_motion) to OFI which shows strong stationarity.
 
 The backtesting engine is built on top of [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader). The result shows a +0.28% return over the 3 trading days, annualized (365 days) is +34.1%. The strategy also has a ~9% fill ratio with a total of 13k+ orders filled. Most of the returns are from funding rates and maker rebates which I set to 0.01% according to [Binance Maker Fees VIP Tier 1 (lowest VIP tier)](https://public.bnbstatic.com/vip/portal/public/liquidity_prog_um_spec_v54).
 
@@ -16,7 +16,7 @@ For future work, I would like to do further research on the fixed parameters (or
 
 *Please refer to the Jupyter Notebooks for analysis and Python Code for strategy, though the entire codebase is vibecoded, the research and strategy design is 100% done by me. I just let AI do all the donkey work.
 
-- Nathan
+-Nathan
 
 ---
 
