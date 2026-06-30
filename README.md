@@ -11,13 +11,15 @@ In other words, the mid-price is not stationary but bid-ask spread and OFI is. T
 The backtesting engine is built on top of [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader). The result shows a +0.28% return over the 3 trading days, annualized (365 days) is +34.1%. The strategy also has a ~9% fill ratio with a total of 13k+ orders filled. Most of the returns are from funding rates and maker rebates which I set to 0.01% according to [Binance Maker Fees VIP Tier 1 (lowest VIP tier)](https://public.bnbstatic.com/vip/portal/public/liquidity_prog_um_spec_v54).
 
 Result Summary (maker fee: -0.01%)
+| Metric                   | Value                               |
+|--------------------------|-------------------------------------|
 | **Starting Balance**     | `1,000,000.00 USDT`                 |
-| **Funding Cash Flow**    | **`+2,602.19 USDT`**          |
-| **Total Net PnL**        | **`+2,752.88 USDT (+0.28%)`** |
-| **Final Balance**        | **`1,002,752.88 USDT`**       |
+| **Funding Cash Flow**    | **`+2,602.19 USDT`**                |
+| **Total Net PnL**        | **`+2,752.88 USDT (+0.28%)`**       |
+| **Final Balance**        | `1,002,752.88 USDT`                 |
 | **Orders Submitted**     | `148,001`                           |
 | **Orders Filled**        | `13,821`                            |
-| **Fill-to-Cancel Ratio** | **`~9.34%`**                  |
+| **Fill-to-Cancel Ratio** | **`~9.34%`**                        |
 
 The post trade analysis shows that the trading result is not pure luck,  based on the T-Test.
 
@@ -97,13 +99,15 @@ Testing confirmed that under institutional VIP market maker rebate tiers (`maker
 
 ### 3-Day Performance Summary (Final Optimized Run)
 
+| Metric                   | Value                               |
+|--------------------------|-------------------------------------|
 | **Starting Balance**     | `1,000,000.00 USDT`                 |
-| **Funding Cash Flow**    | **`+2,602.19 USDT`**          |
-| **Total Net PnL**        | **`+2,752.88 USDT (+0.28%)`** |
-| **Final Balance**        | **`1,002,752.88 USDT`**       |
+| **Funding Cash Flow**    | **`+2,602.19 USDT`**                |
+| **Total Net PnL**        | **`+2,752.88 USDT (+0.28%)`**       |
+| **Final Balance**        | `1,002,752.88 USDT`                 |
 | **Orders Submitted**     | `148,001`                           |
 | **Orders Filled**        | `13,821`                            |
-| **Fill-to-Cancel Ratio** | **`~9.34%`**                  |
+| **Fill-to-Cancel Ratio** | **`~9.34%`**                        |
 
 ---
 
