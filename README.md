@@ -8,15 +8,15 @@ The entire strategy is basically a non mean-reverting implementation of the infa
 
 In other words, the mid-price is not stationary but bid-ask spread and OFI is. Therefore, I changed the original Avellaneda-Stoikov model from using a Brownian Drift to OFI which shows strong stationarity.
 
-The backtesting engine is built on top of Nautilus Trader. The result shows a +0.28% return over the 3 trading days, annualized (365 days) is +34.1%. The strategy also has a ~9% fill ratio with a total of 13k+ orders filled. Most of the returns are from funding rates and maker rebates which I set to 0.01% according to Binance Maker Fees VIP Tier 1 (lowest VIP tier).
+The backtesting engine is built on top of [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader). The result shows a +0.28% return over the 3 trading days, annualized (365 days) is +34.1%. The strategy also has a ~9% fill ratio with a total of 13k+ orders filled. Most of the returns are from funding rates and maker rebates which I set to 0.01% according to [Binance Maker Fees VIP Tier 1 (lowest VIP tier)](https://public.bnbstatic.com/vip/portal/public/liquidity_prog_um_spec_v54).
 
-The post trade analysis shows that the trading result is not pure luck, according to the T-Test.
+The post trade analysis shows that the trading result is not pure luck,  based on the T-Test.
 
-For future work, I would like to do further research on the fixed parameters (order sizing, inventory caps, etc.) to make it adapt more with what the market is doing.
+For future work, I would like to do further research on the fixed parameters (order sizing, inventory caps, etc.) to make the strat more adaptive with what the market.
 
 *Please refer to the Jupyter Notebooks for analysis and Python Code for strategy, though the entire codebase is vibecoded, the research and strategy design is 100% done by me. I just let AI do all the donkey work.
 
--Nathan
+- Nathan
 
 ---
 
