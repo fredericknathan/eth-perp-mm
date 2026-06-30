@@ -1,0 +1,6 @@
+HFT_MARKET_MAKING_PLAN.md
+__MACOSX/
+.DS_Store
+__pycache__/
+*.pyc
+create_post_trade_nb.py
